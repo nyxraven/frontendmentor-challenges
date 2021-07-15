@@ -1,0 +1,240 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+/* vartiables go here */
+:root {
+  /* color variables */
+
+  /* primary */
+  --color-1: hsl(300, 43%, 22%); /* very dark magenta */
+  --color-2: hsl(333, 80%, 67%); /* soft pink */
+
+  /* meutral */
+  --color-3: hsl(303, 10%, 53%); /* dark greyish magenta */
+  --color-4: hsl(300, 24%, 96%); /* light grayish magenta */
+  --color-5: hsl(0, 0%, 100%); /*white */
+
+  /* font variables */
+  --ff-text: "Spartan", sans-serif;
+  --fw-light: 400;
+  --fw-reg: 500;
+  --fw-bold: 700;
+}
+
+/* reset CSS */
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* reference font size */
+  font-size: 10px;
+}
+
+html,
+body,
+.container {
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  /* my mobile centered flex container */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 375px;
+  background-color: var(--color-5);
+  font-family: var(--ff-text);
+  font-weight: var(--fw-reg);
+  margin-top: 65px;
+  padding: 15px;
+}
+
+/* background balls I don't even see */
+.background-top,
+.background-bottom {
+  position: absolute;
+}
+
+.background-top {
+  top: 0;
+  left: 0;
+}
+
+.background-bottom {
+  bottom: 0;
+  right: 0;
+}
+
+/* fanccy header */
+.general-info h1 {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: var(--color-1);
+  font-weight: var(--fw-bold);
+}
+
+.general-info p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--color-3);
+  padding: 25px 0;
+}
+
+/* reviews styles */
+.review-card {
+  background-color: var(--color-4);
+  padding: 15px 0;
+  margin: 15px 0;
+  border-radius: 10px;
+  position: relative;
+  z-index: 4;
+}
+
+.review-card img {
+  padding: 3px;
+}
+
+.review-card p {
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-1);
+  padding-top: 10px;
+}
+
+/* testimobnials styles */
+.testimonials {
+  padding-top: 15px;
+}
+
+.testimnonial-card {
+  background-color: var(--color-1);
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin: 15px 0;
+}
+
+.testimonial-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.testimonial-header img {
+  border-radius: 50%;
+  width: 50px;
+  padding: 5px;
+}
+
+.testimonial-header p {
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-5);
+  padding-left: 15px;
+}
+
+.testimonial-header .buyer {
+  color: var(--color-2);
+  font-weight: var(--fw-light);
+  display: block;
+  padding: 5px 0 0 5px;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  text-align: left;
+  color: var(--color-4);
+  font-weight: var(--fw-light);
+  padding: 20px 0;
+}
+
+/*desktop styles*/
+@media screen and (min-width: 800px) {
+  html,
+  body {
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    margin-top: 0;
+    min-width: 1024px;
+  }
+  .service-overview,
+  .testimonials {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+  }
+
+  .general-info {
+    width: 43%;
+    text-align: left;
+  }
+
+  .reviews {
+    width: 40%;
+  }
+
+  .general-info,
+  .reviews {
+    max-width: 550px;
+    margin: 10px;
+  }
+
+  /* bigger headers */
+  .general-info h1 {
+    padding-top: 15px;
+    font-size: 5.1rem;
+    line-height: 4.7rem;
+  }
+
+  /* re-arrange review cards */
+  .review-card {
+    display: flex;
+    min-width: 400px;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    text-align: right;
+  }
+
+  /* offset reviews */
+  #review1 {
+    position: relative;
+    right: 85px;
+  }
+
+  #review2 {
+    position: relative;
+    right: 45px;
+  }
+
+  /* more space between the cards */
+  .testimnonial-card {
+    margin: 0 15px;
+  }
+
+  /* offset testimoniaalss */
+
+  #testimonial2 {
+    position: relative;
+    top: 25px;
+  }
+
+  #testimonial3 {
+    position: relative;
+    top: 45px;
+  }
+}
