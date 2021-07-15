@@ -51,7 +51,7 @@ body{
     background-color: var(--color-1);
     background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg")  ;
     /* should i use vw, vh? */
-    background-position: bottom 50vh right 50vw, top 50vh left 50vw, top;
+    background-position: bottom 50vh right 50vw, top 50vh left 50vw;
     background-repeat: no-repeat;
 }
 
