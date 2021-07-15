@@ -53,8 +53,7 @@ body,
   background-color: var(--color-5);
   font-family: var(--ff-text);
   font-weight: var(--fw-reg);
-  margin-top: 65px;
-  padding: 15px;
+  padding: 75px 15px 15px 15px;
 }
 
 /* background balls I don't even see */
