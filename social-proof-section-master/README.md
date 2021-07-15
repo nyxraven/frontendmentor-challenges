@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![images/screenshot.jpg](./screenshot.jpg)
+![images/screenshot.jpg](images/screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/nyxraven/frontendmentor-challenges/tree/master/social-proof-section-master)
+- [Live Site URL](https://nyxraven.github.io/frontendmentor-challenges/social-proof-section-master/socialproof.html)
 
 ## My process
 
@@ -42,8 +42,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@nyxraven](https://www.frontendmentor.io/profile/nyxraven)
+- Twitter - [@NyxLearns](https://www.twitter.com/nyxlearns)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
