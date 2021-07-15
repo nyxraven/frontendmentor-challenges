@@ -50,7 +50,7 @@ body,
 body{
     background-color: var(--color-1);
     background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg")  ;
-    /* should i usee vw, vh? */
+    /* should i use vw, vh? */
     background-position: bottom 50vh right 50vw, top 50vh left 50vw, top;
     background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ body{
 
 }
 
-/* I think I read stuff why I shouldn't do this and did it aanyway */ 
+/* I think I read stuff why I shouldn't do this and did it anyway */ 
 .profile-info {
     padding-top: 85px;
 }
