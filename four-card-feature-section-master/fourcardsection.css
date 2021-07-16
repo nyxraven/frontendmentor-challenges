@@ -148,7 +148,7 @@ div:nth-of-type(5) {
     grid-row: 1;
     align-self: center;
     justify-self: center;
-    padding-top:10px;
+
   }
   .title-container > h1 {
     font-size: 3.6rem;
