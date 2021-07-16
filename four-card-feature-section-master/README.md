@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/nyxraven/frontendmentor-challenges/tree/master/four-card-feature-section-master)
-- [Live Site URL](https://nyxraven.github.io/frontendmentor-challenges/four-card-feature-section-master)
+- [Live Site URL](https://nyxraven.github.io/frontendmentor-challenges/four-card-feature-section-master/fourcardsection.html)
 
 ## My process
 
