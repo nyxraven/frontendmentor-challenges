@@ -14,7 +14,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -34,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/nyxraven/frontendmentor-challenges/tree/master/faq-accordion-card-main)
+- [Live Site URL](https://nyxraven.github.io/frontendmentor-challenges/faq-accordion-card-main/faq-accordion-card-main.html)
 
 ## My process
 
@@ -51,12 +50,12 @@ Users should be able to:
 
 ### What I learned
 
-Positioning background images in CSS
-Adding/removing a class with Javascript
+- Positioning background images in CSS
+- Adding/removing a class with Javascript
 
 ### Continued development
 
-Would have liked the transtions between breaking points to be smoother.
+- Would have liked the transtions between breaking points to be smoother.
 
 ### Useful resources
 
