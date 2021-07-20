@@ -178,7 +178,7 @@ body {
   }
   .container {
     width: 100%;
-
+    padding: 0;
     max-width: 93rem;
     height: 51rem;
     background-color: var(--color-6);
@@ -204,6 +204,7 @@ body {
       url("images/bg-pattern-desktop.svg");
     background-size: 50rem, 100rem;
     background-position: -9rem 5rem, -59rem -32rem;
+    z-index: 666;
   }
 
   /* big orange box */
