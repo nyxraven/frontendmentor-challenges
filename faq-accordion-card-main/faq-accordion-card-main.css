@@ -88,7 +88,6 @@ body {
 }
 
 .faq {
-  height: 100%;
   font-weight: var(--fw-reg);
   background-color: var(--color-6);
   border-radius: 20px;
