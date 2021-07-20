@@ -1,0 +1,233 @@
+/* some variables here */
+:root {
+  /* color variables */
+  --color-1: hsl(238, 29%, 16%); /* Very dark desaturated blue */
+  --color-2: hsl(14, 88%, 65%); /* soft red --> arrows */
+  --color-3: hsl(237, 12%, 33%); /* very dark greyish blue */
+  --color-4: hsl(240, 6%, 50%); /* dark grayish blue */
+  --color-5: hsl(240, 5%, 91%); /* light grayish blue --> dividers */
+  --color-6: hsl(156, 100%, 100%); /* white */
+
+  /* background colors */
+  --color-back-1: hsl(273, 75%, 66%); /* soft violet */
+  --color-back-2: hsl(240, 73%, 65%); /* soft blue */
+
+  /* font variables */
+  --ff-text1: "Kumbh Sans", sans-serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+/* reset CSS stuff*/
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--ff-text1);
+  font-size: 10px; /*reference font */
+  min-width: 36rem; /* the width after it becomes scrollable*/
+}
+
+body {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsl(273, 75%, 66%)),
+    to(hsl(240, 73%, 65%))
+  );
+  background: -o-linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* main container */
+.container {
+  color: var(--color-1);
+  background-color: transparent;
+  width: 90%;
+  max-width: 52rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* image styles */
+.fancy-images {
+  width: 100%;
+  background-image: url("images/illustration-woman-online-mobile.svg"),
+    url("images/bg-pattern-mobile.svg");
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-position: center, center 13rem;
+  z-index: 666;
+}
+
+.faq {
+  height: 100%;
+  font-weight: var(--fw-reg);
+  background-color: var(--color-6);
+  border-radius: 20px;
+  padding: 4rem 2.5rem 6.4rem 2.5rem;
+  position: relative;
+  top: -11.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0.1rem 0.2rem 6rem 0 hsl(237, 12%, 33%);
+  box-shadow: 0.1rem 0.2rem 6rem 0 hsl(237, 12%, 33%);
+}
+
+.faq > h1 {
+  padding: 10rem 0 3rem 0;
+  font-size: 3.3rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.question {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /* flex so i don't position absolute the icon */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem 0;
+}
+
+.question .question-icon {
+  content: url("images/icon-arrow-down.svg");
+}
+
+.question:active,
+.question:hover {
+  color: var(--color-2);
+}
+
+.question.active {
+  font-weight: var(--fw-bold);
+}
+
+.question.active .question-icon {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.answer {
+  background-color: var(--color-6);
+  color: var(--color-4);
+  font-size: 1.3rem;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-5);
+}
+
+.answer p {
+  padding: 0 1.9rem 1.6rem 0;
+}
+
+@media only screen and (min-width: 1020px) {
+  body {
+    min-width: 100rem;
+  }
+  .container {
+    width: 100%;
+    max-width: 93rem;
+    height: 51rem;
+    background-color: var(--color-6);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0.1rem 0.2rem 6rem 0 hsl(237, 12%, 33%);
+    box-shadow: 0.1rem 0.2rem 6rem 0 hsl(237, 12%, 33%);
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+
+  /* desktop images */
+  .fancy-images {
+    height: 100%;
+    background-image: url("images/illustration-woman-online-desktop.svg"),
+      url("images/bg-pattern-desktop.svg");
+    background-size: 50rem, 100rem;
+    background-position: -9rem 5rem, -59rem -32rem;
+  }
+
+  /* big orange box */
+  .fancy-images::after {
+    content: url("images/illustration-box-desktop.svg");
+    position: relative;
+    top: 20rem;
+    left: -9rem;
+  }
+
+  /* FAQs*/
+  .faq {
+    width: 72rem;
+    text-align: left;
+    background-color: var(--color-6);
+    top: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-right: 10rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .faq h1 {
+    padding: 3rem 0;
+    font-size: 3.1rem;
+    text-align: left;
+  }
+}
