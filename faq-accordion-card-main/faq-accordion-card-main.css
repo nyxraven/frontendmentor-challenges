@@ -56,7 +56,8 @@ body {
 .container {
   color: var(--color-1);
   background-color: transparent;
-  width: 90%;
+  width: 100%;
+  padding: 2rem;
   max-width: 52rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,11 +171,14 @@ body {
 }
 
 @media only screen and (min-width: 1020px) {
+  html,
   body {
+    height: 100%;
     min-width: 100rem;
   }
   .container {
     width: 100%;
+
     max-width: 93rem;
     height: 51rem;
     background-color: var(--color-6);
