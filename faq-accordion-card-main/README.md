@@ -59,7 +59,7 @@ Users should be able to:
 
 ### Useful resources
 
-- [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer) - This helped me ato automatically dd vendor prefixes for different browsers.
+- [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer) - This helped me to automatically sdd vendor prefixes for different browsers.
 - [W3Schools](https://www.w3schools.com/howto/howto_js_accordion.asp) - This helped me with creating the accordion thingie and understanding how I should set the elements
 - [Stackoverflow](https://stackoverflow.com/questions/7678883/is-it-better-to-define-images-in-direct-html-or-css) helped me a bit with understanding where I should put my images in HTML or CSS, basically if the image has a context in page structure (logo, photo) it should go in the HTML, if it's only decorative -> CSS
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - to see how much did I fail (It has audits for performance, accessibility, progressive web apps, SEO and more.)
