@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+  /* color variables */
+  --color-1: hsl(233, 47%, 7%); /* very dark blue - background*/
+  --color-2: hsl(244, 38%, 16%); /* slightly daark blue - card background */
+  --color-3: hsl(277, 64%, 61%); /* soft violet - accents */
+  --color-text-1: hsl(0, 0%, 100%); /* white - main heading, stats*/
+  --color-text-2: hsla(
+    0,
+    0%,
+    100%,
+    0.75
+  ); /* transparent white - main paragraph*/
+  --color-text-3: hsla(
+    0,
+    0%,
+    100%,
+    0.6
+  ); /* even more transparent white - stat headings */
+
+  /* font variables */
+  --ff-text1: "Inter", sans-serif;
+  --ff-text2: "Lexend Deca", sans-serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+html {
+  /* reference font size */
+  font-size: 10px;
+}
+
+/* center container */
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-1);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* set minimum width after it becomes scrollable*/
+  min-width: 35rem;
+  min-height: 81rem; /* there's got to be a better way? */
+}
+
+/* card styles mobile */
+
+.card {
+  background-color: var(--color-2);
+  margin: 2.5rem 2rem;
+  border-radius: 1rem;
+  max-width: 50rem;
+  letter-spacing: 0.1rem;
+}
+
+.card-image {
+  background-color: var(--color-3);
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  display: block;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+  /* fancy violet blending */
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+.card-content {
+  margin: 2.5rem;
+}
+
+.card-title,
+.stat-numbers {
+  font-family: var(--ff-text1);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-1);
+  padding: 0.5rem;
+}
+
+.card-title,
+.card-title em {
+  font-size: 2.5rem;
+}
+
+.card-title em {
+  color: var(--color-3);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+}
+
+.card-description,
+.stat-description {
+  font-family: var(--ff-text2);
+  font-weight: var(--fw-reg);
+  line-height: 2.2rem;
+  opacity: 0.8;
+}
+
+.card-description {
+  color: var(--color-text-2);
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
+}
+
+.card-stats {
+  margin-top: 2rem;
+}
+
+.card-stats-element {
+  padding: 1rem;
+}
+
+.stat-numbers {
+  font-size: 2.2rem;
+  opacity: 0.9;
+}
+
+.stat-description {
+  font-size: 1.2rem;
+  color: var(--color-text-3);
+}
+
+/* intermediary stuff because transition makes me sad*/
+
+@media screen and (min-width: 500px) {
+  .card-stats {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-stats-element {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .card-title,
+  .card-title em {
+    font-size: 3rem;
+  }
+}
+
+/* desktop stuff */
+
+@media screen and (min-width: 900px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+    min-height: 48rem;
+  }
+  .card {
+    height: 44.6rem;
+    max-width: 111rem;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+  }
+
+  .card-image {
+    width: 50%;
+    border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    height: 100%;
+  }
+
+  .card-content {
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 3rem;
+  }
+
+  .card-description {
+    font-size: 1.4rem;
+    padding: 2rem 2rem 2rem 0.8rem;
+  }
+
+  .card-stats {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: left;
+    padding: 1rem 4rem 0 0;
+    letter-spacing: 0.2rem;
+  }
+
+  .card-stats-element {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .stat-numbers {
+    font-size: 2.2rem;
+  }
+
+  .card-title,
+  .card-title em {
+    font-size: 3.4rem;
+    line-height: 1.3em;
+  }
+}
