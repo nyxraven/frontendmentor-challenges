@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  /* color variables */
+  --color-1: hsl(31, 77%, 52%); /* bright orange */
+  --color-2: hsl(184, 100%, 22%); /* dark cyan */
+  --color-3: hsl(179, 100%, 13%); /*very dark cyan */
+  --color-text-1: hsla(0, 0%, 100%, 0.75); /*transparent white (paragraphs) */
+  --color-text-2: hsl(
+    0,
+    0%,
+    95%
+  ); /*very light gray (background, headings, buttons) */
+
+  /* font variables */
+  --ff-text1: "Big Shoulders Display", cursive;
+  --ff-text2: "Lexend Deca", sans-serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* reference font size */
+  font-size: 10px;
+}
+
+html,
+body,
+.container {
+  width: 100%;
+  background-color: var(--color-text-2);
+  color: var(--color-text-2);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 81rem;
+  min-width: 26.6rem;
+  padding: 2rem;
+}
+
+.card {
+  min-width: 20rem;
+  max-width: 30.5rem;
+  min-height: 27rem;
+  padding: 2.5rem 1rem 2.5rem 3rem;
+  position: relative;
+}
+
+.card-logo img {
+  width: 3.5rem;
+}
+
+main > div:first-child {
+  background-color: var(--color-1);
+  border-radius: 1rem 1rem 0 0;
+}
+
+main > div:nth-child(2) {
+  background-color: var(--color-2);
+}
+
+main > div:nth-child(3) {
+  background-color: var(--color-3);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.card-title {
+  font-family: var(--ff-text1);
+  font-weight: var(--fw-bold);
+  font-size: 2.3rem;
+  opacity: 0.9;
+  letter-spacing: 0.1rem;
+  padding: 2.2rem 0 1.8rem 0;
+}
+
+.card-description {
+  font-family: var(--ff-text2);
+  font-weight: var(--fw-reg);
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6rem;
+  color: var(--color-text-1);
+}
+
+.card-button {
+  height: 2.8rem;
+  width: 10rem;
+  border-radius: 1.4rem;
+  font-family: var(--ff-text2);
+  letter-spacing: 0.1rem;
+  position: absolute;
+  bottom: 2.8rem;
+}
+
+#sedan {
+  color: var(--color-1);
+}
+
+#sedan:active {
+  background-color: var(--color-1);
+  color: var(--color-text-2);
+}
+
+#suv {
+  color: var(--color-2);
+}
+
+#suv:active {
+  background-color: var(--color-2);
+  color: var(--color-text-2);
+}
+
+#luxury {
+  color: var(--color-3);
+}
+
+#luxury:active {
+  background-color: var(--color-3);
+  color: var(--color-text-2);
+}
+
+.card-button:active {
+  border: 2px solid var(--color-text-2);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 350px) {
+  .card-description {
+    font-size: 1.2rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    margin-top: 1.5rem;
+    flex-flow: row nowrap;
+    min-width: 64rem;
+  }
+  .card {
+    height: 50rem;
+    padding: 4.5rem 2rem 4rem 3rem;
+  }
+
+  .card-logo img {
+    width: 6rem;
+  }
+
+  .card-title {
+    font-size: 3.7rem;
+    padding: 2.5rem 0;
+  }
+
+  main > div:first-child {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  main > div:nth-child(3) {
+    background-color: var(--color-3);
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .card-description {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+  }
+
+  .card-button {
+    width: 14rem;
+    height: 4.8rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    bottom: 4.7rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    padding: 5rem 3rem 5rem 5rem;
+  }
+
+  .card-logo img {
+    width: 6.7rem;
+  }
+
+  .card-title {
+    font-size: 3.9rem;
+    padding: 3rem 0;
+  }
+
+  .card-description {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+  }
+
+  .card-button {
+    font-size: 1.4rem;
+  }
+}
