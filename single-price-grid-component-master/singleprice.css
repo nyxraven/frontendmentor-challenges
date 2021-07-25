@@ -1,0 +1,200 @@
+/* some variables here */
+:root {
+  /* color variables */
+  /* primary */
+  --color-1: hsl(179, 62%, 43%); /* cyan */
+  --color-2: hsl(71, 73%, 54%); /* bright yellow */
+  /* neutral */
+  --color-3: hsl(204, 43%, 93%); /* light gray */
+  --color-4: hsl(218, 22%, 67%); /* grayish blue */
+  --color-5: white;
+  /* font variables */
+  --ff-text: "Karla", sans-serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+/* CSS reset */
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  /* reference font */
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--color-3);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin: auto;
+  /* minimum limit after it becomes scrollable */
+  min-width: 30rem;
+  min-height: 83rem;
+}
+
+.container {
+  font-family: var(--ff-text);
+  font-weight: var(--fw-reg);
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  margin: 2rem;
+  box-shadow: 0 2rem 4rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile + */
+
+/* general styles */
+.card {
+  width: 100%;
+  padding: 2rem 2rem 2.6rem 2rem;
+  max-width: 50rem;
+}
+
+.card h1,
+.card h2,
+.card p,
+.card ul {
+  padding: 1rem 0;
+}
+
+li {
+  list-style: none;
+  letter-spacing: 0.1rem;
+  font-weight: var(--fw-reg);
+}
+
+/* 1st card */
+section:nth-of-type(1) > h1 {
+  font-size: 2rem;
+  color: var(--color-1);
+}
+
+.card > h2 {
+  font-size: 1.6rem;
+  color: var(--color-2);
+}
+
+section:nth-of-type(1) {
+  background-color: var(--color-5);
+  color: var(--color-4);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* 2nd & 3rd card */
+section:nth-of-type(2),
+section:nth-of-type(3) {
+  background-color: var(--color-1);
+  color: var(--color-5);
+}
+
+section:nth-of-type(2) h1,
+section:nth-of-type(3) h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+/* price & subscription styles */
+.card .dollar {
+  font-size: 3.5rem;
+  font-weight: var(--fw-bold);
+  vertical-align: middle;
+}
+
+.card .subscription {
+  padding-left: 1rem;
+  letter-spacing: 0.1rem;
+  opacity: 0.7;
+}
+/* button styles*/
+.card button {
+  background-color: var(--color-2);
+  color: var(--color-5);
+  font-family: var(--ff-text);
+  font-weight: var(--fw-reg);
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1.2rem;
+  padding: 1.4rem;
+  box-shadow: 0.1rem 0.4rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* 3rd card */
+section:nth-of-type(3) {
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  opacity: 0.8;
+}
+
+/* Desktop */
+@media screen and (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 3.2rem 4rem 3.2rem 4rem;
+  }
+  .card p {
+    font-size: 1.6rem;
+  }
+
+  /* 1st card */
+  section:nth-of-type(1) {
+    max-width: 63.6rem;
+    grid-column: 1/3;
+    grid-row: 1;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  section:nth-of-type(1) h2 {
+    font-size: 1.8rem;
+    padding: 1rem 0 0.6rem 0;
+  }
+
+  section:nth-of-type(1) h1 {
+    font-size: 2.4rem;
+  }
+
+  /* 2nd & 3rd card */
+  section:nth-of-type(2) h1,
+  section:nth-of-type(3) h1 {
+    font-size: 1.7rem;
+  }
+
+  .card .sub-info {
+    padding: 1.2rem 0 0.4rem 0;
+  }
+
+  .card button {
+    margin-top: 1.8rem;
+  }
+
+  section:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 0 0 0 0.5rem;
+  }
+
+  section:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 0 0 0.5rem 0;
+  }
+}
